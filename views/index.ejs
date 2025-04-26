@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url Shortner</title>
+    <link rel="stylesheet" href="css/style.css"
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="inner-container">
+        <p class="description-text">Paste the URL to be shortened</p>
+        <form action="/shorturl" method="post" class="form-element">
+          <input
+            type="text"
+            name="longUrl"
+            placeholder="Enter url to be shorten"
+            class="text-field"
+            required
+          />
+          <input type="submit" value="Shorten URL" class="submit-btn" />
+        </form>
+        <% if(shortUrl){ %>
+        <p class="short-url">Short url: <a><%= shortUrl %></a></p>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
